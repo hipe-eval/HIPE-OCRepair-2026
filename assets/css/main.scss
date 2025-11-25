@@ -1,0 +1,30 @@
+---
+
+---
+// START HIPE ADAPTATIONS
+$text-color: #222222;
+//$masthead-link-color: #3b9cba;
+$masthead-link-color: #885EAD;
+//$masthead-link-color: #444444;
+//$masthead-link-color: #2A7085;
+$masthead-link-color-hover: mix(#000, $masthead-link-color, 25%) !default;
+//$link-color: #3b9cba;
+$link-color: #885EAD;
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+$small: 600px !default;
+$medium: 768px !default;
+$medium-wide: 900px !default;
+$large: 1024px !default;
+$x-large: 1280px !default;
+$max-width: $x-large !default;
+
+// END HIPE ADAPTATIONS
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
