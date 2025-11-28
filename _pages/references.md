@@ -44,4 +44,4 @@ M. Ehrmann, M. Romanello, A. Doucet, and S. Clematide, S. (2022). Introducing th
 
 - CLEF-HIPE-2020 Workshop [Presentation Video Recordings](https://www.youtube.com/playlist?list=PLB45F159nVx-3bee7G_1jdTfUAtsLD0FU).
 
-<details>
+[//]: # (<details>)

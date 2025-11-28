@@ -16,20 +16,20 @@ minimal_mistakes_skin    : "default" # *default", "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "en-US"
-title                    : "HIPE 2026"
+title                    : "HIPE-OCRepair 2026"
 title_separator          : "-"
-subtitle                 : "A CLEF Evaluation Lab." # site tagline that appears below site title in masthead
-name                     : "CLEF HIPE 2026 Organizers"
-description              :'Identifying Historical People, Places and other Entities: Shared Task on Named Entity Recognition and Linking on Historical Documents at CLEF 2022.'
+subtitle                 : "ICDAR Competition." # site tagline that appears below site title in masthead
+name                     : "HIPE-OCRepair 2026 Organizers"
+description              :'ICDAR 2026 Competition: LLM-Assisted OCR Post-Correction for Historical Documents'
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : '/HIPE-2026'
-repository               : 'hipe-eval/HIPE-2026' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+baseurl                  : '/HIPE-OCRepair'
+repository               : 'hipe-eval/HIPE-OCRepair' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           :  # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
-email            : 'https://groups.google.com/g/hipe-2026'
+email            : 'https://groups.google.com/g/hipe-ocrepair-2026'
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -102,11 +102,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "CLEF HIPE 2022 Organizers"
+  name             : "HIPE-OCRepair 2026 Organizers"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : # "I am an **amazing** person."
   location         : #'dada' # "Somewhere"
-  email            : 'https://groups.google.com/g/hipe-2026'
+  email            : 'https://groups.google.com/g/hipe-ocrepair-2026'
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -130,9 +130,9 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "HIPE 2026 Mailing List"
+    - label: "HIPE-OCRepair 2026 Mailing List"
       icon: "fas fa-fw fa-envelope-square"
-      url: "https://groups.google.com/g/hipe-2026"
+      url: "https://groups.google.com/g/hipe-ocrepair-2026"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: 'https://fedihum.org/@impresso'
@@ -215,7 +215,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jemoji
+#  - jemoji
   - jekyll-feed
   - jekyll-include-cache
 
@@ -345,7 +345,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+#  - jemoji
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
@@ -354,7 +354,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+#  - jemoji
   - jekyll-include-cache
 
 

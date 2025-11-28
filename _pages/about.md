@@ -3,7 +3,7 @@ title: HIPE-2026 Shared Task
 permalink: about
 ---
 
-### HIPE-2026: Evaluating Accurate and Efficient Person–Place Relation Extraction
+### HIPE-OCRepair: ICDAR 2026 Competition on LLM-Assisted OCR Post-Correction for Historical Documents
 
 Building on the success of HIPE-2020 and HIPE-2022, the third edition of the HIPE shared
 task explores the extraction of **person–place relations** in **multilingual historical
