@@ -22,8 +22,8 @@ subtitle                 : "An ICDAR Competition." # site tagline that appears b
 name                     : "HIPE-OCRepair 2026 Organizers"
 description              :'ICDAR 2026 Competition: LLM-Assisted OCR Post-Correction for Historical Documents'
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : '/HIPE-OCRepair'
-repository               : 'hipe-eval/HIPE-OCRepair' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+baseurl                  : '/HIPE-OCRepair-2026'
+repository               : 'hipe-eval/HIPE-OCRepair-2026' # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           :  # overrides the website title displayed in the masthead, use " " for no title
