@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # *default", "air", "aqua", "contrast", "da
 locale                   : "en-US"
 title                    : "HIPE-OCRepair 2026"
 title_separator          : "-"
-subtitle                 : "ICDAR Competition." # site tagline that appears below site title in masthead
+subtitle                 : "An ICDAR Competition." # site tagline that appears below site title in masthead
 name                     : "HIPE-OCRepair 2026 Organizers"
 description              :'ICDAR 2026 Competition: LLM-Assisted OCR Post-Correction for Historical Documents'
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
