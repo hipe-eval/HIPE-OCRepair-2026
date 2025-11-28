@@ -1,5 +1,5 @@
 ---
-title: Timeline & Author Instructions
+title: Timeline
 permalink: timeline
 ---
 
@@ -26,8 +26,3 @@ permalink: timeline
 All times are CEST.
 
 Please also refer to the general timeline of ICDAR 2026 for now: [ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
-
-
-## Paper Instructions
-
-(Will be completed in due time)

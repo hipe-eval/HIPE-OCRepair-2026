@@ -44,8 +44,6 @@ More about the evaluation methodology can be found on the ➡️ **[Evaluation](
 
 The full schedule, including data releases, leaderboard openings, evaluation phase, and deadlines, is available on the ➡️ **[Timeline](/HIPE-OCRepair/timeline)** page.
 
-Official registration and competition information can be found on the ➡️ **[ICDAR 2026 website](https://icdar2026.org/)**.
-
 For questions, participants may contact the organizers via the [HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
 
 ---
