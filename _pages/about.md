@@ -1,53 +1,73 @@
 ---
-title: HIPE-2026 Shared Task
+title: HIPE-OCRepair 2026
 permalink: about
 ---
 
-### HIPE-OCRepair: ICDAR 2026 Competition on LLM-Assisted OCR Post-Correction for Historical Documents
+HIPE-OCRepair is an ICDAR 2026 competition dedicated to **OCR post-correction for multilingual historical documents**, with a particular focus on **LLM-assisted approaches**. The goal is to evaluate whether modern large language models can effectively address the **“OCR debt”** accumulated in vast digitized collections, and to provide a unified, high-quality benchmark for this long-standing challenge.
 
-Building on the success of HIPE-2020 and HIPE-2022, the third edition of the HIPE shared
-task explores the extraction of **person–place relations** in **multilingual historical
-documents**. Participants will develop systems that help uncover implicit and explicit
-connections between people and places across time, contributing to research in
-historical knowledge graphs, spatial humanities, and biographical reconstruction.
+Despite major progress in OCR engines, historical documents remain difficult to digitize accurately: degraded scans, complex typography, multilingual variation, and layout noise often produce errors that propagate downstream into search, NLP, and digital humanities research. Because large-scale re-digitization is impractical for most institutions, **post-correction remains the most realistic solution**.
 
-<div style="text-align: center;">
-  <img src="/HIPE-2026/assets/images/hipe-2026-motivation.png" alt="Motivation" />
-</div>
-
-#### Challenges of the task
-
-Traditional simple co-occurence analysis is not good enough!
-![Example](/HIPE-2026/assets/images/churchill-hipe-2026-example.png)
-
-Systems must understand the text to determine whether a person was actually at a place, and if so, whether this was in the
-immediate temporal context of the document's publication time, or at some point in the past. This requires handling
-historical language variation, OCR noise, and limited context, as well as reasoning about
-temporal and geographical information.
-
-For full details on task setup, data, and evaluation criteria, please see the [Tasks & Data](/HIPE-2026/tasks) page.
+HIPE-OCRepair introduces a _new benchmark_, _standardized evaluation metrics_, _curated multilingual datasets_, and a _leaderboard_ to **systematically assess LLMs** and alternative approaches for OCR post-correction.
 
 ---
 
-### Evaluation Profiles
+### Challenges of the Task
 
-HIPE-2026 features two evaluation profiles:
+Modern OCR systems and LLMs both struggle with:
 
-1. **Accuracy Profile** – Focusing on system performance in relation classification.
-2. **Efficiency Profile** – Rewarding scalable, lightweight approaches considering model size and compute cost.
+- Historical typography and orthographic variation  
+- Noisy scans, microfilm artifacts, and complex layouts  
+- Fragmented or inconsistent ground truth  
+- Domain and language variation  
+- Risk of hallucinations in generative correction systems  
 
-An unseen dataset from a different domain will be included to test generalization.
+The competition requires participants to:
+
+1. **Correct noisy OCR text** from historical sources *without* access to images.  
+2. Handle **multilingual content**, including German, French, English, and Luxembourgish.  
+3. Produce outputs that **lower character error rate (CER)** and improve text consistency.  
+4. Avoid harmful rewrites or hallucinated insertions 🤖.
+
+Example input (OCR) → output (post-correction) pairs are provided in the dataset.
+
+For details on datasets, task setup, and evaluation, see the ➡️ **[Tasks & Data](/HIPE-OCRepair/tasks)** page.
 
 ---
 
-### Registration and Information
+### Evaluation Overview
 
-More information on the schedule and registration can be found on the [CLEF page](https://clef2026.clef-initiative.eu/). For questions, please contact the organizers via our [mailing list](https://groups.google.com/g/hipe-2026).
+More about the evaluation methodology can be found on the ➡️ **[Evaluation](/HIPE-OCRepair/evaluation)** page.
 
 ---
 
-### About the Previous Edition (HIPE-2022)
+### Registration & Participation
 
-HIPE-2022 expanded the HIPE evaluation series by introducing multilingual corpora, more complex document types, and diverse annotation tagsets. Participants were challenged to build systems that could cope with OCR noise, partial knowledge base coverage, and historical language variation. See the [HIPE-2022 website](https://impresso.github.io/CLEF-HIPE-2022/) for details.
+The full schedule, including data releases, leaderboard openings, evaluation phase, and deadlines, is available on the ➡️ **[Timeline](/HIPE-OCRepair/timeline)** page.
+
+Official registration and competition information can be found on the ➡️ **[ICDAR 2026 website](https://icdar2026.org/)**.
+
+For questions, participants may contact the organizers via the [HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
+
+---
+
+### Background: Why a New OCR Post-Correction Benchmark?
+
+Previous OCR post-correction competitions ([ICDAR2017 Competition on Post-OCR Text Correction](https://l3i.univ-larochelle.fr/app/uploads/sites/12/2024/05/icdar2017-competition-post28329.pdf), [ICDAR 2019 Competition on Post-OCR Text Correction](https://hal.science/hal-02304334v1/document)) advanced the field, but limitations remain:
+
+- inconsistent transcription policies  
+- heterogeneous segmentation  
+- variable annotation quality  
+- lack of large-scale multilingual data  
+- no unified, LLM-ready benchmark  
+
+Meanwhile, the recent surge of LLM-based OCR post-correction studies shows both promise and **contradictory results** (please check ➡️ **[References](/HIPE-OCRepair/references)**), partly because of inconsistent datasets, evaluation methods, or ground truth quality. HIPE-OCRepair addresses this gap by providing a **standardized, reproducible, community-wide benchmark**.  
+
+---
+
+### About the Organizers
+
+HIPE-OCRepair is organized by members of the **Impresso** project (EPFL and University of Zurich), with extensive experience in historical document processing and shared tasks, including previous coordination of CLEF-HIPE 2020/2022/2026.
+
+See the full organizer biographies on the ➡️ **[Organizers](/HIPE-OCRepair/organizers)** page.
 
 ---

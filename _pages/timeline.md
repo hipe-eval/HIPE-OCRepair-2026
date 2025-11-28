@@ -6,7 +6,7 @@ permalink: timeline
 
 <!--ts-->
 [Timeline](./timeline.md#timeline)    
-[Working Note Paper Instructions](./timeline.md#working-notes-instructions)
+[Paper Instructions](./timeline.md#paper-instructions)
 <!--te-->
 
 ## Timeline
@@ -25,9 +25,9 @@ permalink: timeline
 
 All times are CEST.
 
-Please also refer to the general timeline of CLEF 2026 for now: [ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
+Please also refer to the general timeline of ICDAR 2026 for now: [ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
 
 
-## Working Note Paper Instructions
+## Paper Instructions
 
-[Will be completed in due time]
+(Will be completed in due time)

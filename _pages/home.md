@@ -6,7 +6,9 @@ hidden: true
 header:
   #overlay_color: black #"#5e616c"
   overlay_image: /assets/images/readers-cut.jpg
-  overlay_filter: rgba(82, 138, 156, 0.3)
+#  overlay_filter: rgba(46, 42, 31, 0.50)
+  overlay_filter: rgba(92, 119, 85, 0.40)
+
   #actions:
   # - label: "<i class='fas fa-download'></i> Install now"
   #   url: "/docs/quick-start-guide/"

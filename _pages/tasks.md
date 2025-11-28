@@ -10,7 +10,7 @@ The ICDAR 2026 Competition on LLM-Assisted OCR Post-Correction (**HIPE-OCRepair*
 The goal is to evaluate whether systems can transform faulty OCR outputs into clean, human-corrected text, at scale and across diverse document types, periods, and languages.
 This competition introduces a unified benchmark, harmonized ground truth, and scoring protocol specifically designed for LLM-based OCR correction in historical collections.
 
-Participants are asked to build systems that, given a noisy OCR transcript and metadata, will produce a corrected textual output for each input segment. The competition is designed to accommodate generative, discriminative, and hybrid correction approaches.
+Participants are asked to build systems that, given a noisy OCR transcript and metadata, will produce a corrected textual output for each input segment. The competition is designed to accommodate generative and hybrid correction approaches with an emphasis on LLMs-assisted methods.
 
 ---
 
@@ -24,179 +24,43 @@ For each input text chunk (typically a paragraph-like unit), participants receiv
 
 Systems will be evaluated on their ability to reduce character error rate (CER) and word error rate (WER) compared to human-corrected ground truth.
 
-[//]: # (<div style="text-align: center;">)
-
-[//]: # (  <img src="/HIPE-2026/assets/images/schema-temporalscope.png" alt="Motivation" style="width: 75%;"/>)
-
-[//]: # (</div>)
-
 ---
 
-## Input and Output Format
+## Input Format
 
 Each item is provided as JSONL with:
 * ocr: the noisy OCR text 
 * metadata: language, document type, publication title, date 
 * quality: CER, WER, OCR quality score 
-* chunk_id: identifier
+* placeholder for corrected output
 
-Participants must return the same JSONL containing a place for the _system's post-corrected output_.
+### Curation Pipeline
+
+Because source corpora differ widely in transcription policies and quality, all development and test material undergo a rigorous harmonization workflow, including:
+* Standardization of transcription rules and hyphenation conventions 
+* OCR-to-GT alignment and cleanup 
+* Removal of non-correctable noise (e.g., table artifacts, gibberish lines, parts of text belonging to other articles due to segmentation errors)
+* Creation of semantically coherent text chunks (paragraph-like units)
+* Manual verification and correction for GT consistency
 
 ---
 
 ### Realistic Example from Historical Data
 
-Below is a simplified illustration of the OCR post-correction task using a short excerpt from a historical newspaper. The left-hand side shows noisy OCR; the right-hand side shows the target ground truth.
-
-(coming soon)
-
-[//]: # (#### 📄 Article Context)
-
-[//]: # ()
-[//]: # (<table>)
-
-[//]: # (  <thead>)
-
-[//]: # (    <tr>)
-
-[//]: # (      <th style="width: 50%; font-size: 0.9em;">🇫🇷 Original French OCR</th>)
-
-[//]: # (      <th style="width: 50%; font-size: 0.9em;">🇬🇧 Automatic English Translation</th>)
-
-[//]: # (    </tr>)
-
-[//]: # (  </thead>)
-
-[//]: # (  <tbody>)
-
-[//]: # (    <tr>)
-
-[//]: # (      <td style="font-size: 0.8em;">)
-
-[//]: # (        Pour les enfants sinistrés de Bulgarie et de Grèce, Mgr. Stéphane, archevêque de Sofia,)
-
-[//]: # (        vient d’adresser à l’Union internationale de secours aux enfants une dépêche, où, après avoir)
-
-[//]: # (        rendu hommage à cette institution, il s’exprime comme suit : La solidarité humaine se manifeste le plus)
-
-[//]: # (        sensiblement dans les heures critiques. Le peuple bulgare est sincèrement reconnaissant envers tous ceux)
-
-[//]: # (        qui, dans son épreuve actuelle, lui ont témoigné sympathie et aide. Dieu bénisse chaque effort qui)
-
-[//]: # (        soulagera la souffrance, surtout celle des malheureux petits.)
-
-[//]: # ()
-[//]: # (        <br><br>)
-
-[//]: # ()
-[//]: # (        D’autre part, l’U.I.S.E. reçoit de sa déléguée la nouvelle qu’elle a pu assurer une distribution)
-
-[//]: # (        quotidienne de pain à 3400 enfants dans les environs de Philippopoli et, dans la ville même,)
-
-[//]: # (        de pain et de thé à 2500 enfants. En outre, elle a fourni des couvertures à l’hôpital de dix baraques)
-
-[//]: # (        ouvert près de Philippopoli par le chef de la garnison de cette ville, le général Koutzeroff.)
-
-[//]: # ()
-[//]: # (        <br><br>)
-
-[//]: # ()
-[//]: # (        D’Athènes, le Dr Doxiadès, ancien ministre, président de la Ligue patriotique d’assistance aux enfants,)
-
-[//]: # (        télégraphie à l’U.I.S.E. : Envisageant le danger auquel sont exposés les enfants de la population de Corinthe,)
-
-[//]: # (        la Ligue patriotique fait appel aux généreux sentiments de l’Union pour aider et faciliter la bonne marche)
-
-[//]: # (        de l’œuvre de secours entreprise.)
-
-[//]: # (      </td>)
-
-[//]: # (      <td style="font-size: 0.8em;">)
-
-[//]: # (        For the children affected by disasters in Bulgaria and Greece, Mgr. Stéphane, Archbishop of Sofia,)
-
-[//]: # (        wishes to address the International Union for Child Relief with a dispatch, in which, after paying tribute)
-
-[//]: # (        to this institution, he expresses himself as follows: Human solidarity is most significantly manifested)
-
-[//]: # (        in critical hours. The Bulgarian people are sincerely grateful to all those who, in its current ordeal,)
-
-[//]: # (        have shown sympathy and assistance. God bless every effort that alleviates suffering, especially that)
-
-[//]: # (        of the unfortunate little ones.)
-
-[//]: # ()
-[//]: # (        <br><br>)
-
-[//]: # ()
-[//]: # (        Furthermore, the I.U.C.R. receives news from its delegate that it has been able to ensure a daily)
-
-[//]: # (        distribution of bread to 3,400 children in the vicinity of Philippopolis and, in the city itself,)
-
-[//]: # (        bread and tea to 2,500 children. In addition, it has provided blankets to the ten-barrack hospital)
-
-[//]: # (        opened near Philippopolis by the commander of the garrison of that city, General Koutzeroff.)
-
-[//]: # ()
-[//]: # (        <br><br>)
-
-[//]: # ()
-[//]: # (        From Athens, Dr. Doxiadès, former minister and president of the Patriotic League for Child Assistance,)
-
-[//]: # (        telegraphs to the I.U.C.R.: Considering the danger to which the children of the population of Corinth)
-
-[//]: # (        are exposed, the Patriotic League appeals to the generous sentiments of the Union to help and facilitate)
-
-[//]: # (        the smooth progress of the relief work undertaken.)
-
-[//]: # (      </td>)
-
-[//]: # (    </tr>)
-
-[//]: # ()
-[//]: # (  </tbody>)
-
-[//]: # (</table>)
-
-[//]: # ()
-[//]: # (#### 🔑 Annotated Relation Table)
-
-[//]: # ()
-[//]: # (| Person                                                              | Place        | `at`  | `isAt` |)
-
-[//]: # (| ------------------------------------------------------------------- | ------------ | ----- | ------ |)
-
-[//]: # (| Mgr. Stéphane, archevêque de Sofia                                  | Bulgarie     | TRUE  | FALSE  |)
-
-[//]: # (| Mgr. Stéphane, archevêque de Sofia                                  | Grèce        | FALSE | FALSE  |)
-
-[//]: # (| Mgr. Stéphane, archevêque de Sofia                                  | Philippopoli | FALSE | FALSE  |)
-
-[//]: # (| Mgr. Stéphane, archevêque de Sofia                                  | Athènes      | FALSE | FALSE  |)
-
-[//]: # (| Mgr. Stéphane, archevêque de Sofia                                  | Corinthe     | FALSE | FALSE  |)
-
-[//]: # (| Chef de la garnison de cette ville, le général Koutzeroff           | Bulgarie     | TRUE  | TRUE   |)
-
-[//]: # (| Chef de la garnison de cette ville, le général Koutzeroff           | Grèce        | FALSE | FALSE  |)
-
-[//]: # (| Chef de la garnison de cette ville, le général Koutzeroff           | Philippopoli | TRUE  | TRUE   |)
-
-[//]: # (| Chef de la garnison de cette ville, le général Koutzeroff           | Athènes      | FALSE | FALSE  |)
-
-[//]: # (| Chef de la garnison de cette ville, le général Koutzeroff           | Corinthe     | FALSE | FALSE  |)
-
-[//]: # (| Dr. Doxiadès, ancien ministre, président de la Ligue patriotique... | Bulgarie     | FALSE | FALSE  |)
-
-[//]: # (| Dr. Doxiadès, ancien ministre, président de la Ligue patriotique... | Grèce        | TRUE  | TRUE   |)
-
-[//]: # (| Dr. Doxiadès, ancien ministre, président de la Ligue patriotique... | Philippopoli | FALSE | FALSE  |)
-
-[//]: # (| Dr. Doxiadès, ancien ministre, président de la Ligue patriotique... | Athènes      | TRUE  | TRUE   |)
-
-[//]: # (| Dr. Doxiadès, ancien ministre, président de la Ligue patriotique... | Corinthe     | FALSE | FALSE  |)
-
-
+Below is a simplified illustration of the four components of the HIPE-OCRepair
+benchmark:  
+**Original Ground Truth**, **Curated Ground Truth**, **OCR Output**, and the
+**Corrected Version** a system should ideally produce.
+
+| **Original Ground Truth**                                                        | **Curated Ground Truth** | **OCR Output** | **Corrected Version** |
+|----------------------------------------------------------------------------------|---------------------------|----------------|------------------------|
+| L’agence Havas nous transmet les dé pêches qui suivent…                          | L’agence Havas nous transmet les **dépêches** qui suivent… | L'agence Havas nous transmet les **dé pêches** qui suivent… | L’agence Havas nous transmet les **dépêches** qui suivent… |
+| Deux bataillons d’infanterie de La Manoubaont été envoyés…                       | Deux bataillons d’infanterie de La **Manouba ont** été envoyés… | deux bataillons d'infanterie do La **Manoubaont** été envoyés… | Deux bataillons d’infanterie de La **Manouba ont** été envoyés… |
+| Une vingtaine d’hommes sont descendus et se sont mis à la recherche du coupable… | Une vingtaine d’**hommes**… à la **recherche** du coupable… | une vingtaine d’**hom mes**… à la **re cherche** du coupable… | Une vingtaine d’**hommes**… à la **recherche** du coupable… |
+| Après quelques instants de recherches…                                           | Après quelques instants de recherches… | Après quelques **ins-tan** de recherches… | Après quelques **instants** de recherches… |
+| Les émissaires annoncent que la révolte est au camp tunisien…                    | Les émissaires annoncent que… | émissaires… **annon cent** que… | Les émissaires **annoncent** que… |
+| refusent d’obéir.béir.                                                           | …refusent d’**obéir**. | …refusent d’**obéir.beir**. | …refusent d’**obéir**. |
+| Le général Ben Turquia s’efforçait de calmer les mutins…                         | …s’**efforçait** de calmer les mutins… | s'**ef-.forçait** de calmer les mutins… | …s’**efforçait** de calmer les mutins… |
 
 ---
 
@@ -207,29 +71,6 @@ Please download the Excel file below for seven more examples and specifications 
 <a href="#" class="btn btn-primary">
   Download Examples (coming soon)
 </a>
-
-[//]: # ()
-[//]: # (<a href="assets/example_data/annotation_examples.xlsx" download class="btn btn-primary">)
-
-[//]: # (  Download Examples)
-
-[//]: # (</a>)
-
----
-
-## Evaluation Profiles
-
-To reflect different research and application priorities, HIPE-2026 will offer two profiles:
-
-1. **Accuracy Profile**:  
-   Ranking based on standard classification metrics (Precision, Recall, F1) per relation type.
-
-2. **Efficiency Profile**:  
-   Ranking based on a composite metric balancing accuracy with:
-   - Model size
-   - Inference time
-   - Hardware usage
-   - Availability as open-source or low-cost system
 
 ---
 
@@ -257,14 +98,6 @@ The benchmark draws on five established datasets and two newly transcribed ones,
 
 All data will be released under **CC-BY 4.0** and distributed via **Zenodo**, with mirrored repositories on **GitHub**.
 
-### Curation Pipeline
-
-Because source corpora differ widely in transcription policies and quality, all development and test material undergo a rigorous harmonization workflow, including:
-* Standardization of transcription rules and hyphenation conventions 
-* OCR-to-GT alignment and cleanup 
-* Removal of non-correctable noise (e.g., table artifacts, gibberish lines, parts of text belonging to other articles due to segmentation errors)
-* Creation of semantically coherent text chunks (paragraph-like units)
-* Manual verification and correction for GT consistency
 
 ---
 
@@ -276,10 +109,10 @@ We will provide:
 - Scoring script
 - A baseline system based on LLM prompting
 
-Details and links will be announced soon. Please check back or follow updates via the [mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
+Details and links will be announced soon.
 
 ---
 
 ## Questions?
 
-Please post to the [mailing list](https://groups.google.com/g/hipe-2026).
+Please post to [HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
