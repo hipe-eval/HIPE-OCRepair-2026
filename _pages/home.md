@@ -51,9 +51,9 @@ feature_row:
     btn_label: "Learn more"
   - image_path: #/assets/images/mm-responsive-feature.png
     alt: #"fully responsive"
-    title: "Workshop"
-    excerpt: "Results and system description papers will be presented at ICDAR 2026 during Aug 31- Sep 2, 2026 in Vienna, Austria."
-    url: "/workshop"
+    title: "Conference"
+    excerpt: "Results and system description papers will be presented during ICDAR 2026 that will take place from Aug 31 to Sep 2, 2026 in Vienna, Austria."
+    url: "/conference"
     #btn_class: "btn--primary"
     btn_label: "Learn more"
   - image_path: #/assets/images/mm-free-feature.png

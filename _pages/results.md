@@ -1,5 +1,5 @@
 ---
-title: HIPE 2026 evaluation results
+title: HIPE-OCRepair 2026 evaluation results
 permalink: results
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Workshop
-permalink: workshop
+title: Conference
+permalink: conference
 ---
 
-The workshop will take place during the [ICDAR 2026 conference](https://icdar2026.org) in Vienna, Austria, from August 31 to September 2, 2026.
+The [ICDAR 2026 conference](https://icdar2026.org) will take place in Vienna, Austria, from August 31 to September 2, 2026.
