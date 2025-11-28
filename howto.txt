@@ -1,0 +1,34 @@
+# Docs
+- https://jekyllrb.com/docs/ for jekyll
+- https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/ for minimal Mistakes
+
+
+
+# Setup environment locally for development
+cd HIPE-2026
+rm -rf vendor/bundle
+rm Gemfile.lock
+bundle install --path vendor/bundle  # install gems in Gemfile in local installation
+
+
+# Build and run site
+bundle exec jekyll serve
+
+# Delete all temporary files
+bundle exec jekyll clean
+
+# Editing content
+edit `_pages/SECTION.md` with relevant content
+
+# Images and data assets for the site; let's stick to two main subdirectories of assets to store them
+assets/images/
+
+assets/data/
+
+# setup/change navigation
+See https://mmistakes.github.io/minimal-mistakes/docs/navigation/
+Configured in `_data/navigation.yml`
+
+
+# chage/setup CSS by SCSS variables
+assets/css/main.scss

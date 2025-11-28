@@ -1,0 +1,82 @@
+---
+
+---
+// // START ADAPTATIONS
+// $text-color: #222222;
+// //$masthead-link-color: #3b9cba;
+// $masthead-link-color: #885EAD;
+// //$masthead-link-color: #444444;
+// //$masthead-link-color: #2A7085;
+// $masthead-link-color-hover: mix(#000, $masthead-link-color, 25%) !default;
+// //$link-color: #3b9cba;
+// $link-color: #885EAD;
+
+$text-color: #2C4436;          // deep readable forest green
+$muted-text-color: #4A6656;    // softer green for metadata
+$link-color: #556B2F;          // primary link
+$link-color-hover: #29482D;    // darker hover
+$masthead-link-color: #556B2F;       // pale parchment green
+$masthead-link-color-hover: #2C4436; // stronger sage-green hover
+
+
+
+// .page__hero--overlay .page__title,
+// .page__hero--overlay h1 {
+//   background: rgba(0, 0, 0, 0.35);   // black with slight transparency
+//   padding: 0.6em 0.9em;              // adjust spacing
+//   display: inline-block;             // make box tight around text
+//   line-height: 1.25;                 // improve readability
+//   box-decoration-break: clone;       // ensures multi-line titles are boxed correctly
+//   -webkit-box-decoration-break: clone;
+// }
+
+/* Deep green box behind hero title */
+.page__hero--overlay .page__title,
+.page__hero--overlay h1 {
+  background: rgba(28, 36, 30, 0.80);
+  /* very deep forest green (#1C241E) with 90% opacity */
+  padding: 0.3em 0.6em;
+  display: inline-block;
+  line-height: 1.25;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: #ffffff; /* ensures perfect contrast */
+}
+//   font-size: 1.5rem !important;   /* default ~3.5–4rem */
+//   line-height: 1.25 !important;
+/* Grain over hero image */
+.page__hero--overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("../images/print-noise.png"); /* path to grain texture */
+//   background-image: url("../images/green-dust-and-scratches.png"); /* path to grain texture */
+  opacity: 0.20;               /* adjust grain intensity */
+  pointer-events: none;
+  mix-blend-mode: multiply;    /* optional: makes grain blend naturally */
+}
+
+/* Reduce hero banner height */
+.page__hero--overlay {
+  padding: 1rem 0 !important;   /* default is ~6–8rem depending on theme */
+  min-height: 150px !important; /* reduce overall height */
+}
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+$small: 600px !default;
+$medium: 768px !default;
+$medium-wide: 900px !default;
+$large: 1024px !default;
+$x-large: 1280px !default;
+$max-width: $x-large !default;
+
+// END ADAPTATIONS
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
