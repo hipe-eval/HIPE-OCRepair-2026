@@ -1,4 +1,4 @@
 # HIPE-OCRepair
-CLEF 2026 Evaluation lab on LLM-assisted OCR post-correction of historical documents.
+ICDAR2026 Competition on LLM-Assisted OCR Post-Correction for Historical Documents.
 
-This repository hosts the jekyll website for this evaluation campagain.
+This repository hosts the jekyll website for this ICDAR competition.
