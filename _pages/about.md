@@ -66,7 +66,7 @@ Meanwhile, the recent surge of LLM-based OCR post-correction studies shows both 
 
 ### About the Organizers
 
-HIPE-OCRepair is organized by members of the **Impresso** project (EPFL and University of Zurich), with extensive experience in historical document processing and shared tasks, including previous coordination of CLEF-HIPE 2020/2022/2026.
+HIPE-OCRepair is organized by members of the **[Impresso](https://impresso-project.ch/)** project (EPFL and University of Zurich), with extensive experience in historical document processing and shared tasks, including previous coordination of CLEF-HIPE 2020/2022/2026.
 
 See the full organizer biographies on the ➡️ **[Organizers](/HIPE-OCRepair/organizers)** page.
 
