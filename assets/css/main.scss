@@ -33,7 +33,7 @@ $masthead-link-color-hover: #2C4436; // stronger sage-green hover
 /* Deep green box behind hero title */
 .page__hero--overlay .page__title,
 .page__hero--overlay h1 {
-  background: rgba(28, 36, 30, 0.90);
+  background: rgba(28, 36, 30, 0.65);
   /* very deep forest green (#1C241E) with 90% opacity */
   padding: 0.3em 0.6em;
   display: inline-block;
@@ -41,10 +41,9 @@ $masthead-link-color-hover: #2C4436; // stronger sage-green hover
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   color: #ffffff; /* ensures perfect contrast */
+}
 //   font-size: 1.5rem !important;   /* default ~3.5–4rem */
 //   line-height: 1.25 !important;
-}
-
 /* Grain over hero image */
 .page__hero--overlay::after {
   content: "";
