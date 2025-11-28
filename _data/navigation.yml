@@ -10,8 +10,8 @@ main:
     url: 'results'
   - title: Timeline
     url: 'timeline'
-  - title: Workshop
-    url: 'workshop'
+  - title: Conference
+    url: 'conference'
   - title: References
     url: 'references'
   - title: Organizers
