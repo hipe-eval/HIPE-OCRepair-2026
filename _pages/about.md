@@ -30,19 +30,19 @@ The competition requires participants to:
 
 Example input (OCR) → output (post-correction) pairs are provided in the dataset.
 
-For details on datasets, task setup, and evaluation, see the ➡️ **[Tasks & Data](/HIPE-OCRepair/tasks)** page.
+For details on datasets, task setup, and evaluation, see the ➡️ **[Tasks & Data](/HIPE-OCRepair-2026/tasks)** page.
 
 ---
 
 ### Evaluation Overview
 
-More about the evaluation methodology can be found on the ➡️ **[Evaluation](/HIPE-OCRepair/evaluation)** page.
+More about the evaluation methodology can be found on the ➡️ **[Evaluation](/HIPE-OCRepair-2026/evaluation)** page.
 
 ---
 
 ### Registration & Participation
 
-The full schedule, including data releases, leaderboard openings, evaluation phase, and deadlines, is available on the ➡️ **[Timeline](/HIPE-OCRepair/timeline)** page.
+The full schedule, including data releases, leaderboard openings, evaluation phase, and deadlines, is available on the ➡️ **[Timeline](/HIPE-OCRepair-2026/timeline)** page.
 
 For questions, participants may contact the organizers via the [HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
 
@@ -58,7 +58,7 @@ Previous OCR post-correction competitions ([ICDAR2017 Competition on Post-OCR Te
 - lack of large-scale multilingual data  
 - no unified, LLM-ready benchmark  
 
-Meanwhile, the recent surge of LLM-based OCR post-correction studies shows both promise and **contradictory results** (please check ➡️ **[References](/HIPE-OCRepair/references)**), partly because of inconsistent datasets, evaluation methods, or ground truth quality. HIPE-OCRepair addresses this gap by providing a **standardized, reproducible, community-wide benchmark**.  
+Meanwhile, the recent surge of LLM-based OCR post-correction studies shows both promise and **contradictory results** (please check ➡️ **[References](/HIPE-OCRepair-2026/references)**), partly because of inconsistent datasets, evaluation methods, or ground truth quality. HIPE-OCRepair addresses this gap by providing a **standardized, reproducible, community-wide benchmark**.  
 
 ---
 
@@ -66,6 +66,6 @@ Meanwhile, the recent surge of LLM-based OCR post-correction studies shows both 
 
 HIPE-OCRepair is organized by members of the **[Impresso](https://impresso-project.ch/)** project (EPFL and University of Zurich), with extensive experience in historical document processing and shared tasks, including previous coordination of CLEF-HIPE 2020/2022/2026.
 
-See the full organizer biographies on the ➡️ **[Organizers](/HIPE-OCRepair/organizers)** page.
+See the full organizer biographies on the ➡️ **[Organizers](/HIPE-OCRepair-2026/organizers)** page.
 
 ---

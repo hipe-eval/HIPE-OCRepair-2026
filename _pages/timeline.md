@@ -3,14 +3,6 @@ title: Timeline
 permalink: timeline
 ---
 
-
-<!--ts-->
-[Timeline](./timeline.md#timeline)    
-[Paper Instructions](./timeline.md#paper-instructions)
-<!--te-->
-
-## Timeline
-
 * **30 Nov 2025 (Sun)**: Competition announcement 1.
 * **10 Dec 2025 (Wed)**: Sample data publication.
 * **19 Jan 2026 (Mon)**: Release of training and development data and scorer; Competition announcement 2.
@@ -25,4 +17,8 @@ permalink: timeline
 
 All times are CEST.
 
-Please also refer to the general timeline of ICDAR 2026 for now: [ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
+Please also refer to the general timeline of ICDAR 2026 for now:  
+[ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
+
+**Registration:**  
+You can register by sending an email to the organizers at **[your-email@domain]**.

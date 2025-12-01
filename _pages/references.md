@@ -42,7 +42,7 @@ permalink: references
 - **No Free Lunches in LLM OCR Post-Correction (Multilingual, Historical)**  
   J. Kanerva, C. Ledins, S. Käpyaho, and F. Ginter.  
   *[OCR Error Post-Correction with LLMs in Historical Documents: No Free Lunches](https://aclanthology.org/2025.resourceful-1.8/).*  
-  RESOURCEFUL-2025 Workshop.  
+  RESOURCEFUL-2025 Workshop.
 
 - **GPT-based Post-OCR Correction in English Prosody Texts**  
   J. Zhang, W. Haverals, M. Naydan, and B. Kernighan.  
