@@ -22,4 +22,4 @@ Please also refer to the general timeline of ICDAR 2026 for now:
 
 **Registration:**  
 You can register by sending an email to the organizers.  
-Contact details are available on the **[Organizers page](/organizers)**.
+Contact details are available on the **[Organizers page](/HIPE-OCRepair-2026/organizers)**.
