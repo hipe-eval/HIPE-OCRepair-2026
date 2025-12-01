@@ -21,4 +21,5 @@ Please also refer to the general timeline of ICDAR 2026 for now:
 [ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
 
 **Registration:**  
-You can register by sending an email to the organizers at **[your-email@domain]**.
+You can register by sending an email to the organizers.  
+Contact details are available on the **[Organizers page](/organizers)**.
