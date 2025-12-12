@@ -52,7 +52,6 @@ The full schedule, including data releases, leaderboard openings, evaluation pha
 
 After registration, for questions, participants may contact the organizers via the [HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
 
-
 ---
 
 ### About the Organizers

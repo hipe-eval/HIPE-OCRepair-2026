@@ -19,6 +19,12 @@ All times are CEST.
 
 Please also refer to the general timeline of ICDAR 2026 for now: [ICDAR 2026 Dates](https://icdar2026.org/index.php/call-for-competitions/)
 
-**Registration:**  
-You can register by sending an email to the organizers.  
-Contact details are available on the **[Organizers page](/HIPE-OCRepair-2026/organizers)**.
+### Registration & Contact
+
+📝 **Registration**  
+Please register using the following Google Form: 👉 [Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSeL5NEHYjl0_XC0IYw2FxKM8nKGTxdbC4IB4zzcXQmLMAhXlg/viewform)
+
+📬 **Questions**  
+For any questions, participants may contact the organizers via the  
+[HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
+Contact details are also available on the **[Organizers page](/HIPE-OCRepair-2026/organizers)**.
