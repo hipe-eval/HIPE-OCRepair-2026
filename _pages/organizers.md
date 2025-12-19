@@ -32,7 +32,7 @@ In alphabetical order:
 - _Florian Wagner_ — University of Zurich, Switzerland  
   Bachelor student in computational linguistics with experience in data curation and annotation for historical text mining.
 
-## Project and Acknowledgements
+## Project and Acknowledgments
 
 The HIPE-OCRepair-2026 organising team expresses its sincere appreciation to the ICDAR-2026 Competition Committee for the overall coordination and support. 
 
