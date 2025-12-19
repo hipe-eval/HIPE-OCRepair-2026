@@ -28,4 +28,4 @@ Please register using the following Google Form: 👉 [Registration Form](https:
 
 For any questions, participants may contact:
 - the organizers and other participant teams via the [competition Google mailing list](https://groups.google.com/g/hipe-ocrepair-2026);
-- the organizers only (see contacts on the [arganizers page](/HIPE-OCRepair-2026/organizers)).
+- the organizers only (see contacts on the [organizers page](/HIPE-OCRepair-2026/organizers)).
