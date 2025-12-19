@@ -9,6 +9,8 @@ Despite major progress in OCR engines, historical documents remain difficult to 
 
 HIPE-OCRepair introduces a _new benchmark_, _standardized evaluation metrics_, _curated multilingual datasets_, and a _leaderboard_ to **systematically assess LLMs** and alternative approaches for OCR post-correction.
 
+👉 Registration form [here](https://forms.gle/AQ9kR6YzrBkNwq5Z7).
+
 ---
 
 ### Background: Why a New OCR Post-Correction Benchmark?
@@ -47,6 +49,9 @@ More about the evaluation methodology can be found on the ➡️ **[Evaluation](
 ---
 
 ### Registration & Participation
+
+
+👉 To register to the competition, fill in this [form](https://forms.gle/AQ9kR6YzrBkNwq5Z7).
 
 The full schedule, including data releases, leaderboard openings, evaluation phase, and deadlines, is available on the ➡️ **[Timeline](/HIPE-OCRepair-2026/timeline)** page.
 
