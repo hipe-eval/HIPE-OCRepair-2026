@@ -24,7 +24,8 @@ Please also refer to the general timeline of ICDAR 2026 for now: [ICDAR 2026 Dat
 📝 **Registration**  
 Please register using the following Google Form: 👉 [Registration Form](https://docs.google.com/forms/d/e/1FAIpQLSeL5NEHYjl0_XC0IYw2FxKM8nKGTxdbC4IB4zzcXQmLMAhXlg/viewform)
 
-📬 **Questions**  
-For any questions, participants may contact the organizers via the  
-[HIPE-OCRepair 2026 mailing list](https://groups.google.com/g/hipe-ocrepair-2026).
-Contact details are also available on the **[Organizers page](/HIPE-OCRepair-2026/organizers)**.
+📬 **Questions**
+
+For any questions, participants may contact:
+- the organizers and other participant teams via the [competition Google mailing list](https://groups.google.com/g/hipe-ocrepair-2026);
+- the organizers only (see contacts on the [arganizers page](/HIPE-OCRepair-2026/organizers)).
