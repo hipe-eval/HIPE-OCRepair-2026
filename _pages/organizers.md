@@ -32,11 +32,10 @@ In alphabetical order:
 - _Florian Wagner_ — University of Zurich, Switzerland  
   Bachelor student in computational linguistics with experience in data curation and annotation for historical text mining.
 
-## Partner Projects and Data Providers
+## Project and Acknowledgements
 
-- [Impresso — _Media Monitoring of the Past_](https://impresso-project.ch)  
-  A research initiative dedicated to large-scale semantic enrichment of digitized historical newspapers.
+The HIPE-OCRepair-2026 organising team expresses its sincere appreciation to the ICDAR-2026 Competition Committee for the overall coordination and support. 
 
----
+HIPE-OCRepair-2026 is part of the [HIPE-eval](https://github.com/hipe-eval) series of shared tasks on historical document and information processing and evaluation.
 
-We also collaborate with institutions and researchers from the digital humanities, NLP, and cultural heritage sectors to support multilingual, open-access historical datasets and evaluation resources.
+HIPE-eval editions are organised within the framework of the [Impresso - Media Monitoring of the Past](https://impresso-project.ch/)￼ project, funded by the Swiss National Science Foundation under grant No. CRSII5_213585 and by the Luxembourg National Research Fund under grant No. 17498891.
