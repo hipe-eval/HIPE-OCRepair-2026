@@ -3,67 +3,60 @@ title: Tasks & Data
 permalink: tasks
 ---
 
-## Task Overview
-
-The ICDAR 2026 Competition on LLM-Assisted OCR Post-Correction (HIPE-OCRepair) evaluates systems that transform noisy OCR text from multilingual historical documents into clean, corrected text.
-
-The competition provides a unified benchmark with **harmonized ground truth** and a **scoring protocol** tailored to LLM-based OCR correction. Participants are asked to build systems that, given a noisy OCR segment and its metadata, generate an improved corrected version. Both generative and hybrid approaches are supported, with a **focus on LLM-assisted methods**.
-
----
-
 ## Task Description
 
+📦 [Data repository](https://github.com/hipe-eval/HIPE-OCRepair-2026-data) (training data and documentation)    
+🗒️ [Participation Guidelines](https://github.com/hipe-eval/HIPE-OCRepair-2026-data/blob/main/README-Participation-Guidelines.md)    
+📈 [HIPE-OCRepair-scorer repository](https://github.com/hipe-eval/HIPE-OCRepair-scorer/)        
+📊 [Evaluation repository](https://github.com/hipe-eval/HIPE-OCRepair-2026-eval) (for resuts after the competition)      
+🏆 [Hugging Face Leaderboard](https://huggingface.co/spaces/hipe-ocrepair-2026-eval)  (available soon)
+
+The ICDAR 2026 Competition on LLM-Assisted OCR Post-Correction (HIPE-OCRepair) challenges participants to correct noisy OCR transcripts from multilingual historical documents. 
+
+Given an OCR segment and its metadata, systems must return an improved corrected version — without access to the source images.
+
+The competition provides a **multilingual benchmark** with curated ground truth and a standardised evaluation protocol. Both generative and hybrid approaches are welcome, with a particular focus on **LLM-assisted methods**.
+
 For each input text chunk (typically a paragraph-like unit), participants receive:
-* The raw OCR hypothesis 
-* Document-level metadata (language, publication title, type, date)
+* the raw OCR hypothesis 
+* document-level metadata (language, publication title, type, date)
 * OCR quality indicators (CER, WER, lexicon-based quality score)
-* A standardized text segmentation optimized for LLMs
 
-Systems will be evaluated on their ability to reduce character error rate (CER). More details on evaluation metrics and infrastructure can be found on the ➡️ **[Evaluation](/HIPE-OCRepair-2026/evaluation)** page.
-
----
-
-## Input Format
-
-Each item is provided as JSONL with:
-* ocr: the noisy OCR text 
-* metadata: language, document type, publication title, date 
-* quality: CER, WER, OCR quality score 
-* placeholder for corrected output
-
-### Curation Pipeline
-
-Because source corpora differ widely in transcription policies and quality, all development and test material undergo a rigorous harmonization workflow, including:
-* Standardization of transcription rules and hyphenation conventions 
-* OCR-to-GT alignment and cleanup 
-* Removal of non-correctable noise (e.g., table artifacts, gibberish lines, parts of text belonging to other articles due to segmentation errors)
-* Creation of semantically coherent text chunks (paragraph-like units)
-* Manual verification and correction for GT consistency
+Systems are evaluated on their ability to reduce character error rate (CER). More details on metrics and evaluation infrastructure can be found on the ➡️ **[Evaluation](/HIPE-OCRepair-2026/evaluation)** page.
 
 ---
+
 
 ## Datasets
 
-We release a multilingual OCR post-correction benchmark consisting of harmonized OCR/ground truth (GT) pairs drawn from several historical collections. All datasets were processed through a unified curation pipeline that standardizes transcription conventions, segmentation, and formatting to ensure comparability across languages, periods, and document types.
+The benchmark comprises multilingual OCR post-correction data drawn from several historical collections, covering newspapers and printed works in English, French, and German (17th–20th century). All datasets were processed through a unified curation pipeline that standardises format, document unit segmentation and, as far as possible, transcription conventions, to ensure comparability across languages, time periods, and document types.
 
-The benchmark includes both:
-* Training data (segmentation + formatting harmonization; original GT kept)
-* Development and Test data (fully curated, standardized, manually corrected)
+The benchmark includes training data (segmentation and formatting harmonisation only; original GT retained) as well as fully curated, manually corrected development and test sets.
+
+👉 **See the [HIPE-OCRepair-2026-data repository](https://github.com/hipe-eval/HIPE-OCRepair-2026-data) to access the data and detailed documentation on the curation process.**
 
 ### 📚 Source Collections
 
-The benchmark draws on five established datasets and two newly transcribed ones, covering newspapers, printed works, and multilingual historical materials:
+| Dataset                             | Curation | Document Type | Languages | Period |
+|-------------------------------------|----------|----------------|-----------|---------|
+| DTA-19 (Deutsches Textarchiv)       | medium | printed works | de | 17C–19C |
+| impresso-nzz (Neue Zürcher Zeitung) | light | newspaper | de | 19C–20C |
+| ICDAR-2017 (subsets)                | substantial | newspaper | fr, de | 17C–20C |
+| Overproof                           | substantial | newspaper | en | 19C–20C |
+| Impresso snippets                   | newly transcribed | newspaper | en, lu, fr, de | 19C–20C |
 
-| Dataset | Curation | Document Type | Languages | Period |
-|--------|----------|----------------|-----------|---------|
-| DTA (Deutsches Textarchiv) | medium | printed works | de | 17C–19C |
-| NZZ (Neue Zürcher Zeitung) | light | newspaper | de | 19C–20C |
-| ICDAR-2017 (subsets) | substantial | newspaper | fr, de | 17C–20C |
-| Overproof | substantial | newspaper | en | 19C–20C |
-| HIPE | newly transcribed | newspaper | en, fr, de | 19C–20C |
-| Impresso | newly transcribed | newspaper | en, lu, fr, de | 19C–20C |
+### Input/Output Format
 
-All data will be released under **CC-BY 4.0** and distributed via **Zenodo**, with mirrored repositories on **GitHub**.
+Each dataset is provided as a JSONL file with JSON documents following the [hipe-ocrepair.schema.json](https://github.com/hipe-eval/HIPE-OCRepair-scorer/blob/main/data/schema/hipe-ocrepair.schema.json) schema, with four top-level fields
+
+* document_metadata: provenance and contextual information.
+* ocr_hypothesis: the OCR text to be corrected
+* ground_truth: the reference transcription (masked in test files).
+* ocr_postcorrection_output: the field to be filled by participant systems. 
+
+See more information on the [Participation Guidelines](https://github.com/hipe-eval/HIPE-OCRepair-2026-data/blob/main/README-Participation-Guidelines.md).
+
+---
 
 ### Realistic Example from Historical Data
 
@@ -81,30 +74,6 @@ benchmark:
 | Les émissaires annoncent que la révolte est au camp tunisien…                    | Les émissaires annoncent que… | émissaires… **annon cent** que… | Les émissaires **annoncent** que… |
 | refusent d’obéir.béir.                                                           | …refusent d’**obéir**. | …refusent d’**obéir.beir**. | …refusent d’**obéir**. |
 | Le général Ben Turquia s’efforçait de calmer les mutins…                         | …s’**efforçait** de calmer les mutins… | s'**ef-.forçait** de calmer les mutins… | …s’**efforçait** de calmer les mutins… |
-
----
-
-### Download Example Data
-
-Please download the Excel file below for seven more examples and specifications on the annotation scheme.
-
-<a href="#" class="btn btn-primary">
-  Download Examples (coming soon)
-</a>
-
-
----
-
-## Baselines and Starter Code
-
-We will provide:
-
-- Input data in JSONL format in a repository that will be made public soon and Hugging Face dataset
-- Scoring script
-- A baseline system based on LLM prompting
-- A Hugging Face leaderboard
-
-Details and links will be announced soon.
 
 ---
 
