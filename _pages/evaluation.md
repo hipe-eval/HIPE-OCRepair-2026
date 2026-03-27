@@ -38,7 +38,7 @@ Each test dataset consists of a set of **transcription units**. All metrics are 
 
 ### cMER and wMER
 
-For a single transcription unit, MER is:   
+For a single transcription unit, MER is:
 $$\mathrm{MER} = \frac{S + D + I}{H + S + D + I}$$
 
 For character-level scoring this gives **cMER**; for word-level scoring (using `jiwer.process_words(...)` after normalization) this gives **wMER**.
@@ -51,7 +51,7 @@ $$\mathrm{cMER}_{\mathrm{macro}} = \frac{1}{N} \sum_{i=1}^{N} \mathrm{cMER}_{i}$
 
 $$\mathrm{cMER}_{\mathrm{micro}} = \frac{\sum_i S_i + \sum_i D_i + \sum_i I_i}{\sum_i H_i + \sum_i S_i + \sum_i D_i + \sum_i I_i}$$
 
-$(\mathrm{wMER}_{\mathrm{macro}})$ and $(\mathrm{wMER}_{\mathrm{micro}})$ are defined analogously over word-level alignments.
+`wMER_macro` and `wMER_micro` are defined analogously over word-level alignments.
 
 In plain terms:
 
