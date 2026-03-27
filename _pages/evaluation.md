@@ -1,6 +1,7 @@
 ---
 title: Evaluation
 permalink: evaluation
+mathjax: true
 ---
 
 ## Evaluation
