@@ -1,7 +1,6 @@
 ---
 title: Evaluation
 permalink: evaluation
-mathjax: true
 ---
 
 ## Evaluation
@@ -40,8 +39,9 @@ Each test dataset consists of a set of **transcription units**. All metrics are 
 ### cMER and wMER
 
 For a single transcription unit, MER is:
-
-$$\mathrm{MER} = \frac{S + D + I}{H + S + D + I}$$
+```math
+\mathrm{MER} = \frac{S + D + I}{H + S + D + I}$$
+```
 
 For character-level scoring this gives **cMER**; for word-level scoring (using `jiwer.process_words(...)` after normalization) this gives **wMER**.
 
