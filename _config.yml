@@ -14,6 +14,7 @@
 remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # *default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+mathjax: true
 # Site Settings
 locale                   : "en-US"
 title                    : "HIPE-OCRepair 2026"
