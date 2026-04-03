@@ -9,6 +9,19 @@ The HIPE-OCRepair evaluation framework is designed to ensure **fair, transparent
 
 ---
 
+## Evaluation period
+
+As indicated in the [Timeline](https://hipe-eval.github.io/HIPE-OCRepair-2026/timeline), the evaluation period will run from **Monday 6 April 2026 (9 a.m. CEST)** to **Wednesday 8 April 2026 (10 a.m. CEST)**.
+
+The test sets will be released in the official [data repository](https://github.com/hipe-eval/HIPE-OCRepair-2026-data).
+
+At the end of the evaluation period, participants submit their system outputs via email to the task organisers, as announced via the mailing list and explained in the [Participation Guidelines](https://github.com/hipe-eval/HIPE-OCRepair-2026-data/blob/main/README-Participation-Guidelines.md#57-how-to-submit).
+
+Results will be published on Friday 10 April 2026 on the [Results page](https://hipe-eval.github.io/HIPE-OCRepair-2026/results) and in a dedicated GitHub repository. 
+
+A Hugging Face leaderboard will be set up after the competition with the official rankings, and will remain active for future benchmarking and community contributions.
+
+
 ## Metrics
 
 ### Primary metric: cMER
