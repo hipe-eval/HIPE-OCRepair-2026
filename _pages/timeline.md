@@ -8,7 +8,7 @@ permalink: timeline
 * **02 Mar 2026 (Mon)**: Release of training and development data and scorer; Competition announcement 2.
 * **09 Mar 2026 (Mon)**: Scorer release with submission format checker.
 * **31 March 2026 (Tue)**: Registration closes
-* **~~31 Mar 2026 (Tue)~~ 06 April 2026 (Mon)**: Masked test data release and opening of evaluation phase.*
+* **~~31 Mar 2026 (Tue)~~ 06 April 2026 (Mon)**: Masked test data release and opening of evaluation phase. **Test Data Released!**  👉 [Data Repository](https://github.com/hipe-eval/HIPE-OCRepair-2026-data/releases)
 * **~~02 Apr 2026 (Thu)~~ 08 April 2026 10 p.m. CEST (Wed)**: End of evaluation phase, submission of results.
 * **~~08 Apr 2026 (Wed)~~ 10 April 2026 5pm CEST (Fri)**: Publication of results.
 * **17 Apr 2026 (Fri)**: General competition report (first version).
